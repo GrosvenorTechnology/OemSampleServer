@@ -13,6 +13,7 @@ namespace SampleServer.Services
         string BootConfiguration { get; }
         string PlatformConfiguration { get; }
         string ApplicationConfiguration { get; }
+        string SharedKey { get; } 
         void SendCommand(string commandName, string targetId,  Dictionary<string, string> parameters);
         void RequestState(string stateName, string targetId);
         void DeleteAllOfType(string entityType);

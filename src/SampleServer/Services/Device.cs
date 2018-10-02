@@ -9,6 +9,7 @@ namespace SampleServer.Services
 {
     public class Device : IDevice
     {
+        public string SharedKey { get; set; } = "9nF2W3A18UG8XOGI7gsk2UV+CdpsSCZ3YHGvQjkKtKY="; //This is our default demo key, remove this in production!
         public ServerQueue<StateRequest> StateRequestQueue { get; } 
         public ServerQueue<Command> CommandRequestQueue { get; }
         public ServerQueue<object> ChangesQueue { get; }

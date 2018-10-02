@@ -6,6 +6,7 @@ using SampleServer.Services;
 namespace SampleServer.Controllers
 {
     [RoutePrefix("grosvenor-oem/device/{serialNumber}/changes")]
+    [Authorize]
     public class ChangesQueueController : QueueControllerBase<object>
     {
         public ChangesQueueController(IDeviceManager deviceManager, ILogger log) : base(deviceManager, log)

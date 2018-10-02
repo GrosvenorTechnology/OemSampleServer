@@ -47,8 +47,9 @@ namespace SampleServer
             var deviceManager = new DeviceManager();
             container.RegisterInstance<IDeviceManager>(deviceManager);
 
-            var testDevices = new Device("TEST-OEM~00001234", container.Resolve<QueueDataService>());
-            deviceManager.AddController("TEST-OEM~00001234", testDevices);
+            var testDevice = new Device("TEST-OEM~00001234", container.Resolve<QueueDataService>());
+            testDevice.SharedKey = "9nF2W3A18UG8XOGI7gsk2UV+CdpsSCZ3YHGvQjkKtKY="; 
+            deviceManager.AddController("TEST-OEM~00001234", testDevice);
         }
     }
 }

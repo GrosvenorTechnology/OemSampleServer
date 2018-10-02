@@ -7,6 +7,7 @@ using Command = SampleServer.Domain.Protocol.Command;
 namespace SampleServer.Controllers
 {
     [RoutePrefix("grosvenor-oem/device/{serialNumber}/commands")]
+    //[Authorize]
     public class CommandQueueController : QueueControllerBase<Command>
     {
         public CommandQueueController (IDeviceManager deviceManager, ILogger log) : base(deviceManager, log)
